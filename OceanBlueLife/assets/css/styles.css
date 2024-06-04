@@ -253,7 +253,7 @@ input {
   left: 0;
 }
 
-/*=============== HOME ===============*/
+/*------ HOME ------*/
 .home__img {
   position: absolute;
   top: 0;
@@ -337,7 +337,7 @@ input {
   transform: var(--img-scale);
 }
 
-/*=============== BUTTONS ===============*/
+/*------ BUTTONS ------*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -364,6 +364,48 @@ input {
 
 .button--link:hover {
   background: none;
+}
+
+/*------ SOBRE ------ */
+.about__data {
+  text-align: center;
+}
+
+.about__container {
+  row-gap: 40px;
+}
+
+.about__description {
+  margin-bottom: var(--mb-2);
+}
+
+.about__img {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__img-overlay {
+  overflow: var(--img-hidden);
+}
+
+.about__img-one {
+  width: 130px;
+}
+
+.about__img-two {
+  width: 180px;
+}
+
+.about__img-one,
+.about__img-two {
+  transition: var(--img-transition);
+}
+
+.about__img-one:hover,
+.about__img-two:hover {
+  transform: var(--img-scale);
 }
 
 /*------ SCROLL BAR ------*/
