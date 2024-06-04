@@ -107,6 +107,25 @@ video {
   height: auto;
 }
 
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
 /*------ HEADER ------*/
 .header {
   width: 100%;
