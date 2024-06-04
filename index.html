@@ -1,9 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OceanSaver - Salvando os Oceanos</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Ocean Blue Life</div>
+        <ul>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="./assets/videos/ocean.mp4" type="video/mp4" />
+          Seu navegador não suporta o vídeo.
+        </video>
+        <div class="hero">
+          <h1>Salvando os Oceanos para as Futuras Gerações</h1>
+          <p>
+            Junte-se a nós na missão de proteger e preservar nossos oceanos.
+          </p>
+          <button onclick="scrollToSection('sobre')">Saiba Mais</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Na OceanSaver, estamos comprometidos com a preservação dos ecossistemas
+        marinhos através de projetos inovadores e campanhas de conscientização.
+      </p>
+    </section>
+
+    <section id="projetos">
+      <h2>Nossos Projetos</h2>
+      <div class="project">
+        <h3>Limpeza de Praias</h3>
+        <p>
+          Organizamos eventos de limpeza de praias em várias regiões para
+          remover resíduos e conscientizar a comunidade.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Educação Ambiental</h3>
+        <p>
+          Realizamos workshops e seminários para educar as pessoas sobre a
+          importância da conservação marinha.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Pesquisa Marinha</h3>
+        <p>
+          Investimos em pesquisas para desenvolver novas tecnologias e métodos
+          para proteger a vida marinha.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 OceanSaver. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
