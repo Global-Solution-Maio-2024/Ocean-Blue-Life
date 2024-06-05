@@ -609,6 +609,24 @@ input {
   border-top: 9px solid var(--shop-color);
 }
 
+/*------ SPONSORS ------*/
+.sponsor__container {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  justify-items: center;
+  align-items: center;
+  row-gap: 56px; 
+}
+
+.sponsor__content:hover .sponsor__img {
+  filter: invert(0.5);
+}
+
+.sponsor__img {
+  width: 90px;
+  filter: invert(0.7);
+  transition: var(--img-transition);
+}
+
 /*------ MEDIA QUERIES ------*/
 
 /* Dispositivos pequenos */
