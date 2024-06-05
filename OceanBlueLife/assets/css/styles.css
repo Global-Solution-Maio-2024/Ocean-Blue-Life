@@ -429,9 +429,30 @@ input {
 }
 
 /*------ GOOGLE MAPS ------*/
-#map {
+:root {
+  --building-color: #FF9800;
+  --house-color: #0288D1;
+  --shop-color: #7B1FA2;
+  --warehouse-color: #558B2F;
+}
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
   height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+#map {
+  height: 50vh;
+  width: 100vw;
 }
 
 /*
@@ -608,7 +629,6 @@ input {
 .property:not(.highlight):has(.fa-shop)::after {
   border-top: 9px solid var(--shop-color);
 }
-
 /*------ SPONSORS ------*/
 .sponsor__container {
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
