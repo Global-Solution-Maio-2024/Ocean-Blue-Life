@@ -69,7 +69,7 @@ function buildContent(property) {
 
 const properties = [
   {
-    address: "215 Emily St, MountainView, CA",
+    address: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     description: "Single family house with modern design",
     price: "$ 3,889,000",
     type: "home",
@@ -77,8 +77,8 @@ const properties = [
     bath: 4.5,
     size: 300,
     position: {
-      lat: 37.50024109655184,
-      lng: -122.28528451834352,
+      lat:7.132236555098889,
+      lng:79.74514909711283,
     },
   },
   {
