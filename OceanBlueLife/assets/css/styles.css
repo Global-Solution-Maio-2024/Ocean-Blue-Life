@@ -536,6 +536,7 @@ input {
   height: 80px;
   padding: 8px 15px;
   width: auto;
+  height: auto;
 }
 
 .property.highlight::after {
@@ -551,20 +552,8 @@ input {
   height: 50px;
 }
 
-.property .bed {
-  color: #ffa000;
-}
-
-.property .bath {
-  color: #03a9f4;
-}
-
-.property .size {
-  color: #388e3c;
-}
-
 /*
- * House icon colors.
+ * Ocean icon colors.
  */
 .property.highlight:has(.fa-water-ocean) .icon {
   color: var(--attencion-color);
@@ -578,50 +567,6 @@ input {
   border-top: 9px solid var(--attencion-color);
 }
 
-/*
- * Building icon colors.
- */
-.property.highlight:has(.fa-building) .icon {
-  color: var(--building-color);
-}
-
-.property:not(.highlight):has(.fa-building) {
-  background-color: var(--building-color);
-}
-
-.property:not(.highlight):has(.fa-building)::after {
-  border-top: 9px solid var(--building-color);
-}
-
-/*
- * Warehouse icon colors.
- */
-.property.highlight:has(.fa-warehouse) .icon {
-  color: var(--warehouse-color);
-}
-
-.property:not(.highlight):has(.fa-warehouse) {
-  background-color: var(--warehouse-color);
-}
-
-.property:not(.highlight):has(.fa-warehouse)::after {
-  border-top: 9px solid var(--warehouse-color);
-}
-
-/*
- * Shop icon colors.
- */
-.property.highlight:has(.fa-shop) .icon {
-  color: var(--shop-color);
-}
-
-.property:not(.highlight):has(.fa-shop) {
-  background-color: var(--shop-color);
-}
-
-.property:not(.highlight):has(.fa-shop)::after {
-  border-top: 9px solid var(--shop-color);
-}
 /*------ SPONSORS ------*/
 .sponsor__container {
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));

@@ -44,25 +44,9 @@ function buildContent(property) {
         <span class="fa-sr-only">${property.type}</span>
     </div>
     <div class="details">
-        <div class="title">${property.title}</div>
-        <div class="address">${property.address}</div>
-        <div class="features">
-        <div>
-            <i aria-hidden="true" class="fa fa-bed fa-lg bed" title="bedroom"></i>
-            <span class="fa-sr-only">bedroom</span>
-            <span>${property.bed}</span>
-        </div>
-        <div>
-            <i aria-hidden="true" class="fa fa-bath fa-lg bath" title="bathroom"></i>
-            <span class="fa-sr-only">bathroom</span>
-            <span>${property.bath}</span>
-        </div>
-        <div>
-            <i aria-hidden="true" class="fa fa-ruler fa-lg size" title="size"></i>
-            <span class="fa-sr-only">size</span>
-            <span>${property.size} ft<sup>2</sup></span>
-        </div>
-        </div>
+        <strong class="title">${property.title}</strong>
+        <br>
+        <div class="description">${property.description}</div>
     </div>
     `;
   return content;
@@ -71,11 +55,9 @@ function buildContent(property) {
 const properties = [
   {
     title: "Desastre Marítimo do X-PRESS PEARL e SRI LANKA",
-    description: "Single family house with modern design",
-    price: "$ 3,889,000",
+    description:
+      "O desastre marítimo do X-Press Pearl foi um incidente que ocorreu em maio de 2021. O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em graves consequências ambientais e econômicas.",
     type: "ocean",
-    bed: 5,
-    bath: 4.5,
     size: 300,
     position: {
       lat: 7.110269213822187,
