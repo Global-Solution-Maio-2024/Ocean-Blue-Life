@@ -40,11 +40,11 @@ function buildContent(property) {
   content.classList.add("property");
   content.innerHTML = `
     <div class="icon">
-        <i aria-hidden="true" class="fa fa-icon fa-${property.type}" title="${property.type}"></i>
+        <i aria-hidden="true" class="fa-solid fa-water-${property.type}" title="${property.type}"></i>
         <span class="fa-sr-only">${property.type}</span>
     </div>
     <div class="details">
-        <div class="price">${property.price}</div>
+        <div class="title">${property.title}</div>
         <div class="address">${property.address}</div>
         <div class="features">
         <div>
@@ -70,13 +70,13 @@ function buildContent(property) {
 
 const properties = [
   {
-    address: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    title: "Desastre Marítimo do X-PRESS PEARL e SRI LANKA",
     description: "Single family house with modern design",
     price: "$ 3,889,000",
-    type: "home",
+    type: "ocean",
     bed: 5,
     bath: 4.5,
-    size: 200,
+    size: 300,
     position: {
       lat: 7.110269213822187,
       lng: 79.82028682616873,

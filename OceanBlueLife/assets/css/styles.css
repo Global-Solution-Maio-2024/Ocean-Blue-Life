@@ -55,7 +55,7 @@
 
   /*Google Maps*/
   --building-color: #ff9800;
-  --house-color: #0288d1;
+  --attencion-color: #d10202;
   --shop-color: #7b1fa2;
   --warehouse-color: #558b2f;
 }
@@ -566,16 +566,16 @@ input {
 /*
  * House icon colors.
  */
-.property.highlight:has(.fa-house) .icon {
-  color: var(--house-color);
+.property.highlight:has(.fa-water-ocean) .icon {
+  color: var(--attencion-color);
 }
 
-.property:not(.highlight):has(.fa-house) {
-  background-color: var(--house-color);
+.property:not(.highlight):has(.fa-water-ocean) {
+  background-color: var(--attencion-color);
 }
 
-.property:not(.highlight):has(.fa-house)::after {
-  border-top: 9px solid var(--house-color);
+.property:not(.highlight):has(.fa-water-ocean)::after {
+  border-top: 9px solid var(--attencion-color);
 }
 
 /*
