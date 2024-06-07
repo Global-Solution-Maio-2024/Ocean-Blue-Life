@@ -54,9 +54,10 @@ function buildContent(property) {
         
         <div class="estrago">${property.oleo}</div>
         <br>
-        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 400px; margin-bottom: 10px; "/>
+        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 480px; margin-bottom: 10px; "/>
         <hr/>
-        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 500px; margin-left: -53px; "/>
+        <h2 class="estrago" style="color: red;"">${property.correntes}</h2>
+        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 600px; margin-left: -53px; "/>
     </div>
     `;
   return content;
@@ -67,8 +68,10 @@ const properties = [
     title: "Desastre Marítimo do X-PRESS PEARL e SRI LANKA",
     description:
       "O desastre marítimo do X-Press Pearl foi um incidente que ocorreu em maio de 2021 neste ponto.",
-    text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em graves consequências ambientais e econômicas",
-    estrago: "OlAAAAAAAAAAAAAAAA",
+    text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em <strong>graves consequências ambientais e econômicas</strong>",
+    estrago: "Tamanho do estrago ambiental",
+    oleo: "Apesar dos esforços dos bombeiros e autoridades locais para extinguir as chamas, o navio acabou afundando em águas rasas a cerca de 9,5 quilômetros da costa do Sri Lanka. Isso resultou em um <strong>grande vazamento de óleo e na liberação de uma quantidade significativa de produtos químicos no oceano</strong>, causando sérios danos ao ecossistema marinho e à vida selvagem local.",
+    correntes: "Modelo de predição de correntes - Na data e local do ocorrido",
     type: "ocean",
     size: 300,
     position: {
