@@ -44,12 +44,19 @@ function buildContent(property) {
         <span class="fa-sr-only">${property.type}</span>
     </div>
     <div class="details">
-        <strong class="title">${property.title}</strong>
-        <br>
+         <h1 class="title">${property.title}</h1>
+        
         <div class="description">${property.description}</div>
         <br>
         <div class="text">${property.text}</div>
-        <h1 class="text">${property.estrago}<h1/>
+        <br>
+        <h2 class="estrago">${property.estrago}</h2>
+        
+        <div class="estrago">${property.oleo}</div>
+        <br>
+        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 400px; margin-bottom: 10px; "/>
+        <hr/>
+        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 500px; margin-left: -53px; "/>
     </div>
     `;
   return content;
@@ -60,8 +67,9 @@ const properties = [
     title: "Desastre Marítimo do X-PRESS PEARL e SRI LANKA",
     description:
       "O desastre marítimo do X-Press Pearl foi um incidente que ocorreu em maio de 2021 neste ponto.",
-    text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em graves consequências ambientais e econômicas",
-    estrago: "OlAAAAAAAAAAAAAAAA",
+    text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em <strong>graves consequências ambientais e econômicas</strong>",
+    estrago: "Tamanho do estrago ambiental",
+    oleo: "Apesar dos esforços dos bombeiros e autoridades locais para extinguir as chamas, o navio acabou afundando em águas rasas a cerca de 9,5 quilômetros da costa do Sri Lanka. Isso resultou em um <strong>grande vazamento de óleo e na liberação de uma quantidade significativa de produtos químicos no oceano</strong>, causando sérios danos ao ecossistema marinho e à vida selvagem local.",
     type: "ocean",
     size: 300,
     position: {
