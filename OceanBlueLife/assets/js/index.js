@@ -44,12 +44,19 @@ function buildContent(property) {
         <span class="fa-sr-only">${property.type}</span>
     </div>
     <div class="details">
-        <strong class="title">${property.title}</strong>
-        <br>
+         <h1 class="title">${property.title}</h1>
+        
         <div class="description">${property.description}</div>
         <br>
         <div class="text">${property.text}</div>
-        <h1 class="text">${property.estrago}<h1/>
+        <br>
+        <h2 class="estrago">${property.estrago}</h2>
+        
+        <div class="estrago">${property.oleo}</div>
+        <br>
+        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 400px; margin-bottom: 10px; "/>
+        <hr/>
+        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 500px; margin-left: -53px; "/>
     </div>
     `;
   return content;
