@@ -47,30 +47,6 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll("section[id]");
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
-    }
-  });
-}
-window.addEventListener("scroll", scrollActive);
-
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
   distance: "60px",
@@ -83,8 +59,11 @@ sr.reveal(
            .discover__container,
            .experience__data, .experience__overlay,
            .place__card,
+           .team__section,
            .sponsor__content,
+           .subscribe__section,
            .footer__data, .footer__rights`,
+
   {
     origin: "top",
     interval: 100,
@@ -93,7 +72,7 @@ sr.reveal(
 
 sr.reveal(
   `.about__data, 
-           .video__description,
+           
            .subscribe__description`,
   {
     origin: "left",
@@ -102,7 +81,7 @@ sr.reveal(
 
 sr.reveal(
   `.about__img-overlay, 
-           .video__content,
+           
            .subscribe__form`,
   {
     origin: "right",

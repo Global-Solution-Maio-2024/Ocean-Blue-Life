@@ -639,6 +639,51 @@ input {
   border-top: 9px solid var(--attencion-color);
 }
 
+/*------ TEAm ------*/
+.team-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 280px;
+}
+
+.team-member h3 {
+  color: #333;
+  margin-top: 15px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
 /*------ SPONSORS ------*/
 .sponsor__container {
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
