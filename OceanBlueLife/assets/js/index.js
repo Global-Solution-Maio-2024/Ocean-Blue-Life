@@ -71,6 +71,7 @@ const properties = [
     text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em <strong>graves consequências ambientais e econômicas</strong>",
     estrago: "Tamanho do estrago ambiental",
     oleo: "Apesar dos esforços dos bombeiros e autoridades locais para extinguir as chamas, o navio acabou afundando em águas rasas a cerca de 9,5 quilômetros da costa do Sri Lanka. Isso resultou em um <strong>grande vazamento de óleo e na liberação de uma quantidade significativa de produtos químicos no oceano</strong>, causando sérios danos ao ecossistema marinho e à vida selvagem local.",
+    correntes: "Modelo de predição de correntes - Na data e local do ocorrido",
     type: "ocean",
     size: 300,
     position: {
