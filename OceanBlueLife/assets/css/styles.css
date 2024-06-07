@@ -141,7 +141,6 @@ input {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   text-align: center;
-  text-transform: capitalize;
   margin-bottom: var(--mb-2);
 }
 .container {
@@ -438,14 +437,25 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  width: 70vw;
+  height: 120vh;
+  width: 90vw;
 }
 
 .align__maps {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*

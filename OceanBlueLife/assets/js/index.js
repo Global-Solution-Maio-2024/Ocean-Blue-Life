@@ -54,10 +54,20 @@ function buildContent(property) {
         
         <div class="estrago">${property.oleo}</div>
         <br>
-        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 480px; margin-bottom: 10px; "/>
+        
+        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 300px; margin-bottom: 10px; "/>
+        
         <hr/>
-        <h2 class="estrago" style="color: red;"">${property.correntes}</h2>
-        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 600px; margin-left: -53px; "/>
+        <h2 class="estrago" style="color: red;">${property.correntes}</h2>
+
+        <div class="image__container">
+          <img src="./OceanBlueLife/assets/img/salinidade.png" style="width:500px; margin-left:4px;"/>
+          <img src="./OceanBlueLife/assets/img/temperatura.png" style="width:500px; margin-left:4px;"/>
+          <img src="./OceanBlueLife/assets/img/correntes.gif" style="width:500px; margin-left:-10px; "/>
+        </div>
+      
+        <div class="text">${property.data}</div>
+        
     </div>
     `;
   return content;
@@ -71,7 +81,11 @@ const properties = [
     text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em <strong>graves consequências ambientais e econômicas</strong>",
     estrago: "Tamanho do estrago ambiental",
     oleo: "Apesar dos esforços dos bombeiros e autoridades locais para extinguir as chamas, o navio acabou afundando em águas rasas a cerca de 9,5 quilômetros da costa do Sri Lanka. Isso resultou em um <strong>grande vazamento de óleo e na liberação de uma quantidade significativa de produtos químicos no oceano</strong>, causando sérios danos ao ecossistema marinho e à vida selvagem local.",
-    correntes: "Modelo de predição de correntes - Na data e local do ocorrido",
+    correntes:
+      "Modelo de predição de Salinidade, Temperatura e Correntes - Na data e local do ocorrido",
+    data: "***Dados de salinidade colaboram para entender o comportamento das correntes. Dados de temperatura colaboram para entender o comportamento das correntes",
+    temperatura:
+      "Modelo de predição de Temperatura - Na data e local do ocorrido",
     type: "ocean",
     size: 300,
     position: {
