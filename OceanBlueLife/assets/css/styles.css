@@ -657,6 +657,63 @@ input {
   transition: var(--img-transition);
 }
 
+/*=============== SUBSCRIBE ===============*/
+.subscribe__bg {
+  background-color: var(--first-color-second);
+  padding: 40px 0;
+}
+
+.subscribe__title,
+.subscribe__description {
+  color: var(--white-color);
+}
+
+.subscribe__description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subscribe__form {
+  background-color: var(--input-color);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscribe__input {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe__input::placeholder {
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+#responseMessage {
+  margin-top: 16px;
+  color: var(--white-color);
+  text-align: center;
+}
+
 /*------ FOOTER ------*/
 .footer__container {
   row-gap: 80px;
