@@ -47,6 +47,9 @@ function buildContent(property) {
         <strong class="title">${property.title}</strong>
         <br>
         <div class="description">${property.description}</div>
+        <br>
+        <div class="text">${property.text}</div>
+        <h1 class="text">${property.estrago}<h1/>
     </div>
     `;
   return content;
@@ -56,7 +59,9 @@ const properties = [
   {
     title: "Desastre Marítimo do X-PRESS PEARL e SRI LANKA",
     description:
-      "O desastre marítimo do X-Press Pearl foi um incidente que ocorreu em maio de 2021. O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em graves consequências ambientais e econômicas.",
+      "O desastre marítimo do X-Press Pearl foi um incidente que ocorreu em maio de 2021 neste ponto.",
+    text: "O navio porta-contêineres X-Press Pearl, de bandeira de Singapura, pegou fogo ao largo da costa do Sri Lanka. O navio transportava uma carga perigosa, incluindo produtos químicos e plásticos, e o incêndio resultou em graves consequências ambientais e econômicas",
+    estrago: "OlAAAAAAAAAAAAAAAA",
     type: "ocean",
     size: 300,
     position: {
