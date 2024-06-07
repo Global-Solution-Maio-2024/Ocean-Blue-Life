@@ -72,6 +72,41 @@
   }
 }
 
+/*------- Dark theme ------*/
+body.dark-theme {
+  --first-color-second: hsl(var(--hue-color), 54%, 12%);
+  --title-color: hsl(var(--hue-color), 24%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 29%, 12%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/*------ Button Dark/Light ------*/
+.nav__dark {
+  display: flex;
+  align-items: center;
+  column-gap: 32px; /* 2rem */
+  position: absolute;
+  left: 48px; /* 3rem */
+  bottom: 64px; /* 4rem */
+}
+
+.change-theme,
+.change-theme-name {
+  color: var(--text-color);
+}
+
+.change-theme {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.change-theme-name {
+  font-size: var(--small-font-size);
+}
+
 /*------ Geral ------*/
 * {
   box-sizing: border-box;
@@ -141,7 +176,6 @@ input {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   text-align: center;
-  text-transform: capitalize;
   margin-bottom: var(--mb-2);
 }
 .container {
@@ -414,6 +448,33 @@ input {
   transform: var(--img-scale);
 }
 
+/*------ SCROLL UP ------*/
+.scrollup {
+  position: fixed;
+  right: 16px;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: 8px;
+  display: flex;
+  opacity: 0.9;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon {
+  color: var(--white-color);
+  font-size: 19.2px;
+}
+
+.show-scroll {
+  bottom: 80px;
+}
+
 /*------ SCROLL BAR ------*/
 ::-webkit-scrollbar {
   width: 9.6px;
@@ -438,14 +499,25 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  width: 70vw;
+  height: 120vh;
+  width: 90vw;
 }
 
 .align__maps {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*
@@ -567,6 +639,51 @@ input {
   border-top: 9px solid var(--attencion-color);
 }
 
+/*------ TEAm ------*/
+.team-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 280px;
+}
+
+.team-member h3 {
+  color: #333;
+  margin-top: 15px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
 /*------ SPONSORS ------*/
 .sponsor__container {
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -583,6 +700,63 @@ input {
   width: 90px;
   filter: invert(0.7);
   transition: var(--img-transition);
+}
+
+/*=============== SUBSCRIBE ===============*/
+.subscribe__bg {
+  background-color: var(--first-color-second);
+  padding: 40px 0;
+}
+
+.subscribe__title,
+.subscribe__description {
+  color: var(--white-color);
+}
+
+.subscribe__description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subscribe__form {
+  background-color: var(--input-color);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscribe__input {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe__input::placeholder {
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+#responseMessage {
+  margin-top: 16px;
+  color: var(--white-color);
+  text-align: center;
 }
 
 /*------ FOOTER ------*/

@@ -12,43 +12,68 @@
     <!--Google Maps-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
-    <script type="module" src="./OceanBlueLife/assets/js/index.js"></script>
-
-    <!--Main JS-->
-    <!--=============== MAIN JS ===============-->
-    <script src="./OceanBlueLife/assets/js/main.js"></script>
+    <script type="module" src="./OceanBlueLife/assets/js/maps.js"></script>
 
     <!--CSS-->
     <link rel="stylesheet" href="./OceanBlueLife/assets/css/styles.css" />
 
+    <!--SWIPER CSS -->
+    <link
+      rel="stylesheet"
+      href="./OceanBlueLife/assets/css/swiper-bundle.min.css"
+    />
+
+    <!--EMAILJS-->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("WDIQGlxjc6uJWOeE8");
+      })();
+    </script>
+
     <title>Ocean Blue Life</title>
-    
   </head>
   <body>
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Ocen Blue Life</a>
-
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
+              <a href="#about" class="nav__link">Sobre</a>
             </li>
             <li class="nav__item">
-              <a href="#discover" class="nav__link">Praia</a>
+              <a href="#map" class="nav__link">Mapa</a>
             </li>
             <li class="nav__item">
-              <a href="#place" class="nav__link">Oceano</a>
+              <a href="#team" class="nav__link">Time</a>
+            </li>
+            <li class="nav__item">
+              <a href="#sponsors" class="nav__link">Patrocinadores</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contato</a>
             </li>
           </ul>
-          <i class="ri-close-line nav__close" id="nav-close"></i>
+
+          <div class="nav__dark">
+            <!-- Dark Mode -->
+            <span class="change-theme-name">Dark mode</span>
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+          </div>
+
+          <i
+            class="ri-close-line nav__close"
+            id="nav-close"
+            aria-label="Fechar menu"
+          ></i>
         </div>
 
         <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-function-line"></i>
+          <i class="ri-function-line" aria-label="Abrir menu"></i>
         </div>
       </nav>
     </header>
@@ -64,7 +89,7 @@
 
         <div class="home__container container grid">
           <div class="home__data">
-            <span class="home__data-subtitle">Teste</span>
+            <span class="home__data-subtitle">Global Solution</span>
             <h1 class="home__data-title">
               Salve os oceanos <br />
               por favor
@@ -81,6 +106,7 @@
               href="https://www.facebook.com/"
               target="_blank"
               class="home__social-link"
+              aria-label="Facebook"
             >
               <i class="ri-facebook-box-fill"></i>
             </a>
@@ -88,6 +114,7 @@
               href="https://www.instagram.com/"
               target="_blank"
               class="home__social-link"
+              aria-label="Instagram"
             >
               <i class="ri-instagram-fill"></i>
             </a>
@@ -95,6 +122,7 @@
               href="https://twitter.com/"
               target="_blank"
               class="home__social-link"
+              aria-label="Twitter"
             >
               <i class="ri-twitter-fill"></i>
             </a>
@@ -103,13 +131,13 @@
           <div class="home__info">
             <div>
               <span class="home__info-title"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
-              >
+                >Explore nosso mapa de monitoriamento de desastres
+              </span>
               <a
                 href=""
                 class="button button--flex button--link home__info-button"
               >
-                More <i class="ri-arrow-right-line"></i>
+                Acesse<i class="ri-arrow-right-line"></i>
               </a>
             </div>
 
@@ -135,7 +163,6 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               hendrerit neque ut tempor placerat. Vivamus id nisi euismod
             </p>
-            <a href="#" class="button">Saiba mais</a>
           </div>
 
           <div class="about__img">
@@ -158,135 +185,274 @@
         </div>
       </section>
       <!---Map-->
-      <h2 class="section__title">
+      <h2 class="section__title" id="mapa">
         Mapa<br />
-        Desastres
+        de Monitoramento de Desastres Marítimos
       </h2>
       <section class="align__maps">
         <div id="map"></div>
-       </section>
-      <!------ SPONSORS ------>
-      <section class="sponsor section">
-        <div class="sponsor__container container grid">
-          <div class="sponsor__content">
-            <img src="./OceanBlueLife/assets/img/icon020.png" alt="020 oceans logo" class="sponsor__img" />
-          </div>
-          <div class="sponsor__content">
-            <img src="./OceanBlueLife/assets/img/iconPactoGlobal.png" alt="" class="sponsor__img" style="width: 160px;" />
-          </div>
-          <div class="sponsor__content">
-            <img src="./OceanBlueLife/assets/img/IconSofttek.png" alt="" class="sponsor__img" />
-          </div>
-          <div class="sponsor__content">
-            <img src="./OceanBlueLife/assets/img/iconSelectSolucoes.png" alt="" class="sponsor__img" style="width: 130px;"/>
-          </div>
-          <div class="sponsor__content">
-            <img src="./OceanBlueLife/assets/img/iconAWS.png" alt="" class="sponsor__img" style="width: 120px;"/>
+      </section>
+      <!------ TEAM ------>
+      <section class="team__section" id="team">
+        <div class="container">
+          <h2 class="section__title">Conheça Nosso Time</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <img
+                src="./OceanBlueLife/assets/img/bia.jpg"
+                alt="Beatriz membro 1"
+              />
+              <h3>Beatriz Ferreira Cruz</h3>
+              <p>RM:555698</p>
+              <p>
+                Email: <a href="mailto:email@example.com">email@example.com</a>
+              </p>
+              <p>
+                GitHub:
+                <a href="https://github.com/username">github.com/username</a>
+              </p>
+            </div>
+            <div class="team-member">
+              <img
+                src="./OceanBlueLife/assets/img/amanda.jpg"
+                alt="Nome do Membro 2"
+              />
+              <h3>Amanda Mesquita</h3>
+              <p>RM:559177</p>
+              <p>
+                Email:
+                <a href="mailto:email@example.com"
+                  >amandamesquita73638@gmail.com</a
+                >
+              </p>
+              <p>
+                GitHub:
+                <a href="https://github.com/mandyy14">mandyy14</a>
+              </p>
+            </div>
+            <div class="team-member">
+              <img
+                src="./OceanBlueLife/assets/img/journey.png"
+                alt="Nome do Membro 3"
+              />
+              <h3>Journey Tiago Lopes</h3>
+              <p>RM:556071</p>
+              <p>
+                Email: <a href="mailto:email@example.com">email@example.com</a>
+              </p>
+              <p>
+                GitHub:
+                <a href="https://github.com/username">github.com/username</a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
-       <!------ FOOTER ------>
-       <footer class="footer section">
-        <div class="footer__container container grid">
-          <div class="footer__content grid">
-            <div class="footer__data">
-              <h3 class="footer__title">Ocean Blue Life</h3>
-              <p class="footer__description">
-                lorem ipsum dolor sit<br />
-                lorem, lorem ipsum dolor sit <br />
-                lorem.
-              </p>
-              <div>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  class="footer__social"
-                >
-                  <i class="ri-facebook-box-fill"></i>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  class="footer__social"
-                >
-                  <i class="ri-twitter-fill"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  class="footer__social"
-                >
-                  <i class="ri-instagram-fill"></i>
-                </a>
-                <a
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  class="footer__social"
-                >
-                  <i class="ri-youtube-fill"></i>
-                </a>
-              </div>
-            </div>
 
-            <div class="footer__data">
-              <h3 class="footer__subtitle">About</h3>
-              <ul>
-                <li class="footer__item">
-                  <a href="" class="footer__link">About Us</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Features</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">New & Blog</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__data">
-              <h3 class="footer__subtitle">Company</h3>
-              <ul>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Team</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Plan y Pricing</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Become a member</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__data">
-              <h3 class="footer__subtitle">Support</h3>
-              <ul>
-                <li class="footer__item">
-                  <a href="" class="footer__link">FAQs</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Support Center</a>
-                </li>
-                <li class="footer__item">
-                  <a href="" class="footer__link">Contact Us</a>
-                </li>
-              </ul>
-            </div>
+      <!------ SPONSORS ------>
+      <section class="sponsor section" id="sponsors">
+        <div class="sponsor__container container grid">
+          <div class="sponsor__content">
+            <img
+              src="./OceanBlueLife/assets/img/icon020.png"
+              alt="020 oceans logo"
+              class="sponsor__img"
+            />
           </div>
-          <div class="footer__rights">
-            <p class="footer__copy">
-              &#169; 2024 Bedimcode. All rigths reserved.
-            </p>
-            <div class="footer__terms">
-              <a href="#" class="footer__terms-link">Terms & Agreements</a>
-              <a href="#" class="footer__terms-link">Privacy Policy</a>
-            </div>
+          <div class="sponsor__content">
+            <img
+              src="./OceanBlueLife/assets/img/iconPactoGlobal.png"
+              alt=""
+              class="sponsor__img"
+              style="width: 160px"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="./OceanBlueLife/assets/img/IconSofttek.png"
+              alt=""
+              class="sponsor__img"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="./OceanBlueLife/assets/img/iconSelectSolucoes.png"
+              alt=""
+              class="sponsor__img"
+              style="width: 130px"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="./OceanBlueLife/assets/img/iconAWS.png"
+              alt=""
+              class="sponsor__img"
+              style="width: 120px"
+            />
           </div>
         </div>
-      </footer>
+      </section>
+      <!------ CONTACT ------>
+      <section class="subscribe__section" id="contact">
+        <div class="subscribe__bg">
+          <div class="subscribe__container container">
+            <h2 class="section__title subscribe__title">
+              Entre em <br />
+              contato!
+            </h2>
+            <p class="subscribe__description">
+              Se junte conosco para salvar os oceanos.
+            </p>
+            <form id="contactForm" class="subscribe__form">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite seu Nome"
+                class="subscribe__input"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu Email"
+                class="subscribe__input"
+                required
+              />
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Digite sua Mensagem"
+                class="subscribe__textarea"
+                required
+              ></textarea>
+              <button type="submit" class="button">Enviar</button>
+            </form>
+            <div id="responseMessage"></div>
+          </div>
+        </div>
+      </section>
     </main>
-     <!-- prettier-ignore -->
-     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+
+    <!------ FOOTER ------>
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content grid">
+          <div class="footer__data">
+            <h3 class="footer__title">Ocean Blue Life</h3>
+            <p class="footer__description">
+              lorem ipsum dolor sit<br />
+              lorem, lorem ipsum dolor sit <br />
+              lorem.
+            </p>
+            <div>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="footer__social"
+                aria-label="Facebook"
+              >
+                <i class="ri-facebook-box-fill"></i>
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="footer__social"
+                aria-label="Twitter"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer__social"
+                aria-label="Instagram"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">About</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Features</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">New & Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">Company</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="" class="footer__link">Team</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Plan y Pricing</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Become a member</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__subtitle">Support</h3>
+            <ul>
+              <li class="footer__item">
+                <a href="" class="footer__link">FAQs</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Support Center</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__rights">
+          <p class="footer__copy">
+            &#169; 2024 Bedimcode. All rigths reserved.
+          </p>
+          <div class="footer__terms">
+            <a href="#" class="footer__terms-link">Terms & Agreements</a>
+            <a href="#" class="footer__terms-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!------ SCROLL UP ------>
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!-- SCROLL REVEAL-->
+    <script src="./OceanBlueLife/assets/js/scrollreveal.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="./OceanBlueLife/assets/js/swiper-bundle.min.js"></script>
+
+    <!--Main JS-->
+    <script src="./OceanBlueLife/assets/js/main.js"></script>
+
+    <!--EMAIL JS-->
+    <script src="./OceanBlueLife/assets/js/email.js"></script>
+
+    <!--CHATBOT-->
+    <script src="./OceanBlueLife/assets/js/chatbot.js"></script>
+
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
       ({key: "AIzaSyAYQt1ebviwD2NpLTYCk76VlAnDCuEIhIM", v: "weekly"});</script>
   </body>
 </html>
