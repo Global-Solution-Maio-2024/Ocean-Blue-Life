@@ -54,9 +54,10 @@ function buildContent(property) {
         
         <div class="estrago">${property.oleo}</div>
         <br>
-        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 400px; margin-bottom: 10px; "/>
+        <img src="./OceanBlueLife/assets/img/navio.png" style="width: 480px; margin-bottom: 10px; "/>
         <hr/>
-        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 500px; margin-left: -53px; "/>
+        <h2 class="estrago" style="color: red;"">${property.correntes}</h2>
+        <img src="./OceanBlueLife/assets/img/correntes.gif" style="width: 600px; margin-left: -53px; "/>
     </div>
     `;
   return content;
